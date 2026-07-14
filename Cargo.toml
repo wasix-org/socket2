@@ -33,7 +33,7 @@ rustdoc-args = ["--cfg", "docsrs"]
 features = ["all"]
 
 [target.'cfg(any(unix, target_os = "wasi"))'.dependencies]
-libc = { git = "https://github.com/john-sharratt/libc.git" }
+libc = "0.2"
 
 [target.'cfg(windows)'.dependencies.windows-sys]
 version = "0.36"
