@@ -1,6 +1,6 @@
 [package]
 name          = "socket2"
-version       = "0.5.1"
+version       = "0.5.1+wasix.1"
 authors       = [
   "Alex Crichton <alex@alexcrichton.com>",
   "Thomas de Zeeuw <thomasdezeeuw@gmail.com>"
@@ -34,7 +34,7 @@ targets = ["aarch64-apple-ios", "aarch64-linux-android", "x86_64-apple-darwin", 
 features = ["all"]
 
 [target.'cfg(any(unix, target_os = "wasi"))'.dependencies]
-libc = { git = "https://github.com/wasix-org/libc.git" }
+libc = "0.2.151"
 
 [target.'cfg(windows)'.dependencies.windows-sys]
 version = "0.45"
